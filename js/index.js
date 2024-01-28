@@ -108,6 +108,15 @@ function displaydetal(data) {
     if (arr[i].first.length <= 1) continue;
    card+=`<div class="btn btn-info m-2">${arr[i].first}${arr[i].second}</div>`
   }
+  let cart = ``
+  if (data.strTags != null) {
+    let x = data.strTags.split(",")
+    for (let i = 0; i < x.length; i++) {
+      cart+=`<div class="btn btn-secondary m-2">${x[i]}</div>`
+     }
+    console.log(x)
+  }
+
   let cartona = `
   <div class="col-md-4">
     <div class="layer position-relative">
@@ -130,8 +139,11 @@ function displaydetal(data) {
       <div>
       <h3>Recipes : </h3>
       <div class="mb-3">${card}</div>
+      <h3>Tags :</h3>
+      <div class="mb-3">${cart}</div>
+      <div>
       <a href="${data.strSource}" class="btn btn-success ms-2" target="_blank">Source</a>
-      <a href="${data.strYoutube}" class="btn btn-danger ms-2" target="_blank">Youtube</a>
+      <a href="${data.strYoutube}" class="btn btn-danger ms-2" target="_blank">Youtube</a></div>
       </div>
       
     </div>
@@ -187,11 +199,11 @@ function displayCate(data) {
   let cartona=``
   for (let i = 0; i < data.length; i++){
     let x=data[i].strCategoryDescription.slice(0, 100)
-    cartona += `<div class="col-md-3">
+    cartona += `<div class="col-md-4">
           <div onclick="getdetal('${data[i].strCategory}')" class="layer position-relative">
             <img src="${data[i].strCategoryThumb}" alt="${data[i].strCategory}" class="w-100">
             <div class="position-absolute d-flex flex-column">
-              <h2 >${data[i].strCategory}</h2>
+              <h2>${data[i].strCategory}</h2>
               <p class="m-0 fs-13">${x}</p>
             </div>
           </div>

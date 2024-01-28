@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/index.css">
+  <title>Document</title>
+</head>
+<body>
+    <div id="nav" class="d-flex">
+      <div class="slider text-white d-flex flex-column justify-content-between p-4 bg-dark">
+        <ul >
+          <li><a>Search</a></li>
+          <li><a>Categories</a></li>
+          <li><a>Area</a></li>
+          <li><a>Ingredients</a></li>
+          <li><a onclick="showContacts()">Contact Us</a></li>
+        </ul>
+        <div>
+          <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-solid fa-globe"></i>
+          </div>
+          <p>Copyright Â© 2024 All Rights <br>Reserved.</p>
+        </div>
+      </div>
+      <div class="second-nav  d-flex flex-column justify-content-between bg-white align-items-center p-2 pt-4 pb-4">
+        <img class="logo" src="imge/logo.png" alt="yumme">
+        <i class="fa-solid fa-bars fs-3 open"></i>
+        <div>
+          <i class="fa-solid fa-globe d-block"></i>
+          <i class="fa-solid fa-share-nodes"></i>
+        </div>
+      </div>
+    </div>
+    <section id="home" >
+      <div class="d-flex  mt-4 inputs container d-none searching">
+        <div class="row g-3">
+          <div class="col-md-6">
+            <div class="layer">
+<input  class="form-control me-1 bg-white text-dark" type="text" id="searchByName" placeholder="Search By Name">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="layer">
+<input class="form-control ms-1 bg-white text-dark" type="text" id="searchByFirstLater" placeholder="Search By First Later" maxlength="1">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container" id="contener-row">
+        
+      </div>
+    </section>
+    <div id="loading">
+      <div class="loading-wave">
+        <div class="loading-bar"></div>
+        <div class="loading-bar"></div>
+        <div class="loading-bar"></div>
+        <div class="loading-bar"></div>
+      </div>
+    </div>
+     <div id="particles-js"></div> 
+  <script src="js/particles.js"></script>
+  <script src="js/app.js"></script> 
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
